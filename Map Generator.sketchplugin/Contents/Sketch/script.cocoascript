@@ -33,8 +33,7 @@ var onRun = function(context) {
         if (settings.address.length() > 0) {
           layerSizes = layer.frame();
 
-          imageUrl = "https://maps.googleapis.com/maps/api/staticmap?center=" + encodeURIComponent(settings.address) + "&zoom=" + settings.zoom + "&size=" + parseInt([layerSizes width]) + "x" + parseInt([layerSizes height]) + "&maptype=" + settings.type + "&scale=2" + settings.style + "&key=" + apiKey;
-
+          imageUrl = "http://image.maps.cit.api.here.com/mia/1.6/mapview?app_id=Aa1YIIyNYjkb6oaXEBL4&app_code=pVymqwwjz2o0icg1RF78OQ&ci=" + encodeURIComponent(settings.address) + "&h=" + parseInt([layerSizes height]) + "&w=" + parseInt([layerSizes width]) + "&z=" + settings.zoom + "&f=0&style=alps"
           fillLayerWithImage(imageUrl, layer);
         }
         else {
